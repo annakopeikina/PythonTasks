@@ -6,3 +6,9 @@ while (2 ** k) < n:
     k = k + 1
     if (2 ** k) >= n:
         break
+
+# n = int(input())
+# i = 0
+# while 2 ** i <= n:
+#   print(2 ** i)
+#   i += 1
