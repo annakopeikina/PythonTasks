@@ -1,11 +1,8 @@
 print("введите натуральное число, задающее предел чисел степени числа 2")
 n = int(input())
 k = 1
-while k <= n:
-    if k == n:
-        break
+while (2 ** k) < n:
+    print(2 ** k)
     k = k + 1
-else:
-    print("block")
-
-print(pow(2, k))
+    if (2 ** k) >= n:
+        break
