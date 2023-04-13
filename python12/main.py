@@ -1,11 +1,12 @@
+import math
 from math import sqrt
 import random
-x = random.randint(1, 10)
-y = random.randint(1, 10)
+x = random.randint(1, 1000)
+y = random.randint(1, 1000)
 print("Катя, сумма задуманных Петей чисел равна",
       (x + y), "а их произведение равно", (x * y))
-n = int(x + y)
-m = int(x * y)  # выражаем x через систему уравнений
+n = (x + y)
+m = (x * y)  # выражаем x через систему уравнений
 # x=m-y; (m-y)*y=m; ny-y**=m
 # y**2-ny+m=0; D=n**2 + 4m
 # if D < 0 -корней нет
@@ -13,14 +14,19 @@ m = int(x * y)  # выражаем x через систему уравнени�
 # if D > 0, тогда два корня
 # y1=(n+rootdisc):(2*1)
 # y2=(n-rootdisc):(2*1)
-disc = n ** - 4*m
-root = sqrt(disc)
-if disc < 0:
-    print("уравнение не имеет решения")
-elif disc == 0:
-    print("x=", n/2, "y=", n/2)
-elif disc > 0:
-    if (n - root) <= 0:
-        print("уравнение не имеет решения")
+
+discr = n ** 2 + 4*m
+root = sqrt(discr)
+print("Дискриминант D =", discr)
+if discr > 0:
+    y == (n - math.sqrt(discr))/2
+    if n - y == x & x > 0:
+        print("Y =", y, "X =", n - y)
     else:
-        print("Y=", y, "X=", n-y)
+        print("Y =", y == (n + math.sqrt(discr))/2,
+              ";X =", n - y)
+elif discr == 0:
+    y == n / 2
+    print("y = ", y, "x = ", y)
+elif discr < 0:
+    print("уравнение не имеет решения")
